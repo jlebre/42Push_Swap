@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: admin <admin@student.42.fr>                +#+  +:+       +#+         #
+#    By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 17:09:41 by admin             #+#    #+#              #
-#    Updated: 2022/06/24 21:02:29 by admin            ###   ########.fr        #
+#    Updated: 2022/09/07 16:20:47 by jlebre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,12 @@ FLAGS = -Wall -Werror -Wextra
 
 NAME = push_swap
 
-SRC = push_swap.c colors.c
+SRC = push_swap.c colors.c \
+		swap_a.c swap_b.c swap_ab.c \
+		rotate_a.c rotate_b.c rotate_ab.c \
+		rev_rotate_a.c rev_rotate_b.c rev_rotate_ab.c \
+		push_a.c push_b.c \
+
 OBJ = $(SRC:.c=.o)
 
 HEADER = push_swap.h libft/libft.h
@@ -29,7 +34,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT) $(HEADER)
 	@$(CC) $(OBJ) $(LIBFT) -I$(LIB) -I$(LIBFT_PATH) -o $(NAME)
-#@$(CC) $(OBJ) $(LIBFT) -I$(LIB) -I$(LIBFT_PATH) $(MLXFLAGS_LINUX) -o $(NAME)
 	@echo "\033[0;32mPush_swap Compiled!\033[0m"
 
 $(LIBFT):
@@ -37,7 +41,6 @@ $(LIBFT):
 
 .c.o:
 	@$(CC) $(FLAGS) -I$(LIB) -I$(LIBFT_PATH) -c $< -o $@
-#@$(CC) $(FLAGS) -I$(LIB) -I$(LIBFT_PATH) -I/usr/include -Imlx_linux -O3 -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)
