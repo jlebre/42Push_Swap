@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 15:48:40 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/08 19:18:37 by jlebre           ###   ########.fr       */
+/*   Created: 2022/09/08 17:19:50 by jlebre            #+#    #+#             */
+/*   Updated: 2022/09/08 20:37:22 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_error(void)
+int check(int argc, char **argv)
 {
-    ft_red("Error\n");
-    exit (0);
+    check_is_sorted(argv);
+    check_limits(argv);
+    check_duplicates(argv);
+    return (1);
 }

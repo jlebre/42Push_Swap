@@ -6,21 +6,22 @@
 #    By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 17:09:41 by admin             #+#    #+#              #
-#    Updated: 2022/09/07 16:20:47 by jlebre           ###   ########.fr        #
+#    Updated: 2022/09/08 19:53:53 by jlebre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 RM = @rm -fr
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra 
+#-fsanitize=address -g
 
 NAME = push_swap
 
-SRC = push_swap.c colors.c \
-		swap_a.c swap_b.c swap_ab.c \
+SRC = push_swap.c colors.c utils.c
+#		swap_a.c swap_b.c swap_ab.c \
 		rotate_a.c rotate_b.c rotate_ab.c \
 		rev_rotate_a.c rev_rotate_b.c rev_rotate_ab.c \
-		push_a.c push_b.c \
+		push_a.c push_b.c 
 
 OBJ = $(SRC:.c=.o)
 
@@ -40,7 +41,7 @@ $(LIBFT):
 	@$(MAKE) -C $(LIBFT_PATH)
 
 .c.o:
-	@$(CC) $(FLAGS) -I$(LIB) -I$(LIBFT_PATH) -c $< -o $@
+	@$(CC) $(FLAGS) -I$(LIB) -I$(LIBFT_PATH) -c $< -o $(<:.c=.o)
 
 clean:
 	$(RM) $(OBJ)
