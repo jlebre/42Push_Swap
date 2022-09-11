@@ -6,7 +6,7 @@
 #    By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 17:09:41 by admin             #+#    #+#              #
-#    Updated: 2022/09/11 18:33:59 by jlebre           ###   ########.fr        #
+#    Updated: 2022/09/11 19:44:31 by jlebre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,8 @@ FLAGS = -Wall -Werror -Wextra
 
 NAME = push_swap
 
-SRC = push_swap.c colors.c utils.c check.c add_stack.c check_is_sorted.c
-#		swap_a.c swap_b.c swap_ab.c \
-		rotate_a.c rotate_b.c rotate_ab.c \
-		rev_rotate_a.c rev_rotate_b.c rev_rotate_ab.c \
-		push_a.c push_b.c 
+SRC = push_swap.c colors.c utils.c check.c add_stack.c check_is_sorted.c \
+		push.c swap.c rotate.c rev_rotate.c sort_big.c sort_small.c
 
 OBJ = $(SRC:.c=.o)
 

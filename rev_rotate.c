@@ -1,46 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   rev_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 15:48:35 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 19:22:20 by jlebre           ###   ########.fr       */
+/*   Created: 2022/09/11 19:37:23 by jlebre            #+#    #+#             */
+/*   Updated: 2022/09/11 19:41:52 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    swap(t_stack *stack)
+void    rev_rotate(t_stack *stack)
 {
-    t_stack *temp;
+	t_stack	*temp;
 
-    temp = stack->next;
-    if (stack->next->next)
-	{
+	temp = stack->next;
+    while (stack)
+		stack = stack->next;
+	stack = temp;
+	if (stack->next->next)
         stack->next = stack->next->next;
-        stack->next->next = temp;
-    }
-	else
-		return ;
+	temp->next = NULL; 
 }
 
-void    sa()
+void	rra()
 {
-    swap(stack_a());
-    ft_printf("sa\n");
+	rev_rotate(stack_a());
+	ft_printf("rra\n");
 }
 
-void    sb()
+void	rrb()
 {
-    swap(stack_b());
-    ft_printf("sb\n");
+	rev_rotate(stack_b());
+	ft_printf("rrb\n");
 }
 
-void    ss()
+void	rrr()
 {
-    swap(stack_a());
-    swap(stack_b());
-    ft_printf("ss\n");
+	rev_rotate(stack_a());
+	rev_rotate(stack_b());
+	ft_printf("rrr\n");
 }

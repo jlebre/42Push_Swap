@@ -6,8 +6,13 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:21:05 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/08 17:21:15 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/11 19:43:40 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void    sort_small()
+{
+    ft_printf("Sort Small!\n");
+}

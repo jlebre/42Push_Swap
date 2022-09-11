@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:16 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 18:33:41 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/11 19:44:12 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,37 +33,45 @@ int	ft_green(char *str);
 int	ft_red(char *str);
 int	ft_yellow(char *str);
 
-int check(char **argv);
-//int	check_is_sorted(char **argv);
+//CHECKS
+int 	check(char **argv);
+int		check_is_sorted();
 
+//STACKS
 t_stack	*stack_a();
 t_stack	*stack_b();
 int add_stack(t_stack *stack, int  nbr);
+void    free_stack(t_stack *stack);
 
-/*
+//ALGORITHM
+void    sort_small();
+void    sort_big();
+
 //SWAP
-swap_a();
-swap_b();
-swap_ab();
+void    swap(t_stack *stack);
+void	sa();
+void	sb();
+void	ss();
 
 //PUSH
-push_a();
-push_b();
+void    push(t_stack *stack1, t_stack *stack2);
+void	pa();
+void	pb();
 
 //ROTATE
-rotate_a();
-rotate_b();
-rotate_ab();
+void    rotate(t_stack *stack);
+void	ra();
+void	rb();
+void	rr();
 
 //REVERSE ROTATE
-rev_rotate_a();
-rev_rotate_b();
-rev_rotate_ab();
-*/
+void    rev_rotate(t_stack *stack);
+void	rra();
+void	rrb();
+void	rrr();
+
 //UTILS
 void    ft_error(void);
-void    free_stack(t_stack *stack);
 int		downsize();
-int		check_is_sorted();
 
 #endif

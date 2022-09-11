@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:19:50 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 18:37:28 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/11 19:57:18 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	check_all_int(char **argv)
 		j = 0;
 		if (argv[i][j] == '+' || argv[i][j] == '-')
 			j++;
-		ft_printf("%s\n", argv[i]);
 		while (argv[i][j])
 		{
 			if (!ft_isdigit(argv[i][j]))
@@ -89,7 +88,6 @@ int	downsize()
 				temp->nb++;
 			ptr = ptr->next;
 		}
-		printf("item: %i\n", temp->nb);
 		temp = temp->next;
 	}
 	return (1);
