@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 15:48:40 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 16:15:38 by jlebre           ###   ########.fr       */
+/*   Created: 2022/09/07 15:58:18 by jlebre            #+#    #+#             */
+/*   Updated: 2022/09/11 19:00:04 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_error(void)
+void    push(t_stack *stack1, t_stack *stack2)
 {
-    ft_red("Error\n");
-    exit (0);
+	t_stack *tmp;
+
+	tmp = stack1->next;
+	stack1->next = stack1->next->next;
+	stack2->next = tmp;
+}
+
+void	pa()
+{
+	push(stack_b(), stack_a());
+	ft_printf("pa\n");
+}
+
+void	pb()
+{
+	push(stack_a(), stack_b());
+	ft_printf("pb\n");
 }

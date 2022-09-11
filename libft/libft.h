@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 13:33:21 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/08 20:42:13 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/11 17:08:50 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,40 +26,41 @@ typedef struct s_list
 
 //MANDATORY
 
-int		ft_isalpha(int i);
-int		ft_isdigit(int i);
-int		ft_isalnum(int i);
-int		ft_isascii(int i);
-int		ft_isprint(int i);
-int		ft_strlen(const char *str);
-void	*ft_memset(void *str, int c, int n);
-void	ft_bzero(char *s, int n);
-void	*ft_memcpy(void *dest, const void *src, int n);
-void	*ft_memmove(void *str1, const void *str2, int n);
-int		ft_strlcpy(char *dst, const char *src, int size);
-int		ft_strlcat(char *dest, const char *src, int size);
-int		ft_toupper(int i);
-int		ft_tolower(int i);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-int		ft_strncmp(const char *str1, const char *str2, int n);
-void	*ft_memchr(const void *str, int c, int n);
-int		ft_memcmp(const void *str1, const void *str2, int n);
-char	*ft_strnstr(const char *s1, const char *s2, int n);
-int		ft_atoi(const char *str);
-void	*ft_calloc(int nitems, int size);
-char	*ft_strdup(const char *str);
-char	*ft_substr(char const *s, int start, int len);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
-char	*ft_itoa(int n);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int			ft_isalpha(int i);
+int			ft_isdigit(int i);
+int			ft_isalnum(int i);
+int			ft_isascii(int i);
+int			ft_isprint(int i);
+int			ft_strlen(const char *str);
+void		*ft_memset(void *str, int c, int n);
+void		ft_bzero(char *s, int n);
+void		*ft_memcpy(void *dest, const void *src, int n);
+void		*ft_memmove(void *str1, const void *str2, int n);
+int			ft_strlcpy(char *dst, const char *src, int size);
+int			ft_strlcat(char *dest, const char *src, int size);
+int			ft_toupper(int i);
+int			ft_tolower(int i);
+char		*ft_strchr(const char *s, int c);
+char		*ft_strrchr(const char *s, int c);
+int			ft_strncmp(const char *str1, const char *str2, int n);
+void		*ft_memchr(const void *str, int c, int n);
+int			ft_memcmp(const void *str1, const void *str2, int n);
+char		*ft_strnstr(const char *s1, const char *s2, int n);
+int			ft_atoi(const char *str);
+long long	ft_atol(const char *str);
+void		*ft_calloc(int nitems, int size);
+char		*ft_strdup(const char *str);
+char		*ft_substr(char const *s, int start, int len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
+char		**ft_split(char const *s, char c);
+char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
 
 //BONUS
 

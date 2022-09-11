@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   check_is_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 15:48:40 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 16:15:38 by jlebre           ###   ########.fr       */
+/*   Created: 2022/09/11 15:39:48 by jlebre            #+#    #+#             */
+/*   Updated: 2022/09/11 18:42:32 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_error(void)
+int	check_is_sorted()
 {
-    ft_red("Error\n");
-    exit (0);
+    t_stack *ptr;
+    int     n;
+    
+    ptr = stack_a()->next;
+    n = -1;
+    while (ptr)
+    {
+        if (n > ptr->nb)
+            {ft_red("Is not sorted!\n");
+            return (0);}
+        n = ptr->nb;
+        ptr = ptr->next;
+    }
+    ft_green("Is sorted!\n");
+	return (1);
 }

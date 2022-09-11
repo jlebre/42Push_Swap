@@ -6,19 +6,37 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/08 20:44:29 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/11 18:43:38 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+t_stack	*stack_a()
+{
+	static t_stack	a;
+
+	return (&a);
+}
+
+t_stack	*stack_b()
+{
+	static t_stack	b;
+
+	return (&b);
+}
+
 int	main(int argc, char **argv)
 {
 	if (argc < 2)
 		ft_error ();
-	if (check(argc, argv))
-		ft_printf("Arguments are valid!\n");
-	return (0);
+	if (!check(++argv))
+    ft_red("Error\n");
+  else if (!check_is_sorted())
+    ft_green("Arguments are valid!\n");
+  free_stack(stack_a());
+	free_stack(stack_b());
+  return (0);
 }
 
 //parsing

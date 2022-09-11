@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:16 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/08 20:37:51 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/11 18:33:41 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 typedef struct s_stack
 {
 	int				content;
+	int				nb;
 	struct s_stack 	*next;
 }		t_stack;
 
@@ -32,7 +33,12 @@ int	ft_green(char *str);
 int	ft_red(char *str);
 int	ft_yellow(char *str);
 
-int check(int argc, char **argv)
+int check(char **argv);
+//int	check_is_sorted(char **argv);
+
+t_stack	*stack_a();
+t_stack	*stack_b();
+int add_stack(t_stack *stack, int  nbr);
 
 /*
 //SWAP
@@ -56,5 +62,8 @@ rev_rotate_ab();
 */
 //UTILS
 void    ft_error(void);
+void    free_stack(t_stack *stack);
+int		downsize();
+int		check_is_sorted();
 
 #endif
