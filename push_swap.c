@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/14 15:48:30 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/14 19:08:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,13 @@ int	main(int argc, char **argv)
 		else if ((argc - 1) > 5)
 			sort_big();
 	}
+	temp = stack_a()->next;
+	while (temp != NULL)
+	{
+		ft_printf("%d ----- %d\n", temp->content, temp->nb);
+		temp = temp->next;
+	}
+	check_is_sorted();
 	free_stack(stack_a());
 	free_stack(stack_b());
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:16 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/12 12:05:14 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/14 18:47:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_stack
 {
 	int				content;
 	int				nb;
+	int				size;
 	struct s_stack 	*next;
 }		t_stack;
 

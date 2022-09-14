@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:21:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/12 12:54:48 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/14 19:28:17 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,43 @@ void    sort_big()
 {
     int bit;
     int i;
+    int j;
+    int size;
+    int max_bits;
     t_stack *temp;
 
-    temp = stack_a()->next;
+    //temp = stack_a()->next;
     bit = 0;
+    max_bits = 1;
+    size = 0;
     i = 0;
-    while (bit < 8)
+    j = 0;
+    print_stack();
+    temp = stack_a()->next;
+    while (temp)
     {
-        temp = stack_a()->next;
-        while (temp)
+        if (temp->nb > size)
+            size = temp->nb;
+        temp = temp->next;
+    }
+    while (size >> max_bits != 0)
+        max_bits++;
+    while (bit < max_bits)
+    {
+        j = 0;
+        while (j < size)
         {
-            if (temp->nb & (1 << bit))
+            temp = stack_a()->next;
+            if (temp->nb >> bit & 1)
+            {
+                ra();
+            }
+            else
             {
                 pb();
                 i++;
             }
-            else
-                ra();
-            temp = temp->next;
+            j++;
         }
         while (i > 0)
         {
@@ -42,6 +61,7 @@ void    sort_big()
         }
         bit++;
     }
+    print_stack();
     ft_printf("Sort Big!\n");
 }
 
