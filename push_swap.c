@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 19:47:18 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/14 15:48:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,20 @@ t_stack	*stack_b()
 
 int	main(int argc, char **argv)
 {
+	t_stack	*temp;
+	
 	if (argc < 2)
 		ft_error ();
 	if (!check(++argv))
 		ft_red("Error\n");
 	else if (!check_is_sorted())
 	{
+		temp = stack_a()->next;
+		while (temp != NULL)
+		{
+			ft_printf("%d ----- %d\n", temp->content, temp->nb);
+			temp = temp->next;
+		}
 		if ((argc - 1) <= 5)
 			sort_small();
 		else if ((argc - 1) > 5)
@@ -44,54 +52,16 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-//parsing
-
 /*
-
-Radix Sort with Binary
-
-Começa na direita
-
-00000000
-			 *
-Vai vendo todos os números e confirma se é 0 ou 1
-Se for 1
-Rotate a
-Se for 0
-Push B
-
-Passa 1 casa para a esquerda <<
-
-00000000
-			*
-
-Faz o mesmo processo
-Até acabar o número
-
-00000000
-		 *
-
-00000000
-		*
-
-00000000
-	 *
-
-00000000
-	*
-
-00000000
- *
-
-00000000
-*
-
-if ((num >> i) & 1 == 1)
-	rotate A
-
-
-Só preciso de:
-Rotate a
-Push a
-Push b
+	print_stack();
+	pb();
+	print_stack();
+	ra();
+	print_stack();
+	pa();
+	print_stack();
+	rra();
+	print_stack();
+	sa();
+	print_stack();
 */

@@ -3,22 +3,22 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 17:09:41 by admin             #+#    #+#              #
-#    Updated: 2022/09/11 19:44:31 by jlebre           ###   ########.fr        #
+#    Updated: 2022/09/14 15:46:26 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 RM = @rm -fr
 FLAGS = -Wall -Werror -Wextra 
-#-fsanitize=address -g
+#-fsanitize=address
 
 NAME = push_swap
 
 SRC = push_swap.c colors.c utils.c check.c add_stack.c check_is_sorted.c \
-		push.c swap.c rotate.c rev_rotate.c sort_big.c sort_small.c
+		push.c swap.c rotate.c rev_rotate.c sort_big.c sort_small.c print_stack.c
 
 OBJ = $(SRC:.c=.o)
 

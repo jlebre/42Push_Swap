@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:58:18 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 19:15:40 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/12 17:06:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 void    push(t_stack *stack1, t_stack *stack2)
 {
-	t_stack *tmp;
-
-	tmp = stack1->next;
+	t_stack *head1;
+	t_stack *head2;
+	
+	head1 = stack1->next;
+	head2 = stack2->next;
 	if (stack1->next->next)
+	{
 		stack1->next = stack1->next->next;
-	else
+	}
+	else 
 		stack1->next = NULL;
-	stack2->next = tmp;
+	stack2->next = head1;
+	head1->next = head2;
 }
 
 void	pa()

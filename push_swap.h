@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:16 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 19:44:12 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/12 12:05:14 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ t_stack	*stack_a();
 t_stack	*stack_b();
 int add_stack(t_stack *stack, int  nbr);
 void    free_stack(t_stack *stack);
+void    print_stack();
 
 //ALGORITHM
 void    sort_small();

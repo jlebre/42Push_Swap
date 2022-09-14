@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rev_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 19:37:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 19:41:52 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/12 23:53:01 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 
 void    rev_rotate(t_stack *stack)
 {
-	t_stack	*temp;
+	t_stack	*head;
+	t_stack	*new_tail;
+	t_stack	*tail;
 
-	temp = stack->next;
-    while (stack)
-		stack = stack->next;
-	stack = temp;
-	if (stack->next->next)
-        stack->next = stack->next->next;
-	temp->next = NULL; 
+	if (stack->next->next != NULL)
+	{
+		head = stack->next;
+		tail = stack->next;
+		while (tail->next->next != NULL)
+		{
+			tail = tail->next;
+		}
+		new_tail = tail;
+		tail = tail->next;
+		stack->next = tail;
+		tail->next = head;
+		new_tail->next = NULL;
+	}
 }
 
 void	rra()
