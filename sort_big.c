@@ -6,28 +6,18 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:21:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/14 19:28:17 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/14 22:51:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sort_big()
+int    size_of_stack()
 {
-    int bit;
-    int i;
-    int j;
     int size;
-    int max_bits;
     t_stack *temp;
-
-    //temp = stack_a()->next;
-    bit = 0;
-    max_bits = 1;
+    
     size = 0;
-    i = 0;
-    j = 0;
-    print_stack();
     temp = stack_a()->next;
     while (temp)
     {
@@ -35,6 +25,22 @@ void    sort_big()
             size = temp->nb;
         temp = temp->next;
     }
+    return (size + 1);
+}
+
+void    sort_big()
+{
+    int     bit;
+    int     i;
+    int     j;
+    int     size;
+    int     max_bits;
+    t_stack *temp;
+
+    bit = 0;
+    max_bits = 1;
+    size = size_of_stack();
+    i = 0;
     while (size >> max_bits != 0)
         max_bits++;
     while (bit < max_bits)
@@ -44,9 +50,7 @@ void    sort_big()
         {
             temp = stack_a()->next;
             if (temp->nb >> bit & 1)
-            {
                 ra();
-            }
             else
             {
                 pb();
@@ -61,7 +65,6 @@ void    sort_big()
         }
         bit++;
     }
-    print_stack();
     ft_printf("Sort Big!\n");
 }
 
@@ -74,6 +77,7 @@ void    sort_big()
 00000011
 00000110
 */
+
 /*
 Radix Sort with Binary
 

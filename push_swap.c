@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/14 19:08:20 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/14 22:22:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,31 +27,17 @@ t_stack	*stack_b()
 }
 
 int	main(int argc, char **argv)
-{
-	t_stack	*temp;
-	
+{	
 	if (argc < 2)
 		ft_error ();
 	if (!check(++argv))
 		ft_red("Error\n");
 	else if (!check_is_sorted())
 	{
-		temp = stack_a()->next;
-		while (temp != NULL)
-		{
-			ft_printf("%d ----- %d\n", temp->content, temp->nb);
-			temp = temp->next;
-		}
 		if ((argc - 1) <= 5)
 			sort_small();
 		else if ((argc - 1) > 5)
 			sort_big();
-	}
-	temp = stack_a()->next;
-	while (temp != NULL)
-	{
-		ft_printf("%d ----- %d\n", temp->content, temp->nb);
-		temp = temp->next;
 	}
 	check_is_sorted();
 	free_stack(stack_a());
@@ -60,6 +46,13 @@ int	main(int argc, char **argv)
 }
 
 /*
+	temp = stack_a()->next;
+	while (temp != NULL)
+	{
+		ft_printf("%d ----- %d\n", temp->content, temp->nb);
+		temp = temp->next;
+	}
+
 	print_stack();
 	pb();
 	print_stack();
