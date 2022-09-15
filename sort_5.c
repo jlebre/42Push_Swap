@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:16:56 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/15 18:38:45 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 18:54:02 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,13 @@ void	sort_5(void)
 	i = 0;
 	j = 0;
 	temp = stack_a()->next;
-	temp2 = stack_a()->next;
 	while (temp->nb != 0)
 	{
 		temp = temp->next;
 		i++;
 	}
 	sort_5_1(i);
+	temp2 = stack_a()->next;
 	while (temp2->nb != 1)
 	{
 		temp2 = temp2->next;

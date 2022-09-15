@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 16:33:32 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/15 16:29:30 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 19:48:04 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long long	ft_atol(const char *str)
 {
-	int	i;
-	int	val;
-	int	sinal;
+	int			i;
+	long long	val;
+	int			sinal;
 
 	i = 0;
 	val = 0;

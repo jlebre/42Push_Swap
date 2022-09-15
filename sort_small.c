@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:21:05 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/15 18:37:16 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 19:10:46 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	sort_small(void)
 	int	size;
 
 	size = size_of_stack();
-	print_stack();
 	if (size == 2)
 		sa();
 	else if (size == 3)
@@ -53,6 +52,4 @@ void	sort_small(void)
 		sort_4();
 	else if (size == 5)
 		sort_5();
-	print_stack();
-	ft_printf("Sort Small!\n");
 }

@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:16 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/15 18:33:19 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 20:08:43 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void	rrb(void);
 void	rrr(void);
 
 //UTILS
-void	ft_error(void);
 int		downsize(void);
 
 #endif

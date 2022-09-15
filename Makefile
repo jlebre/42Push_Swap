@@ -6,7 +6,7 @@
 #    By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 17:09:41 by admin             #+#    #+#              #
-#    Updated: 2022/09/15 18:24:56 by jlebre           ###   ########.fr        #
+#    Updated: 2022/09/15 19:29:21 by jlebre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FLAGS = -Wall -Werror -Wextra
 
 NAME = push_swap
 
-SRC = push_swap.c colors.c utils.c check.c add_stack.c check_is_sorted.c \
+SRC = push_swap.c colors.c check.c add_stack.c check_is_sorted.c \
 		push.c swap.c rotate.c rev_rotate.c sort_big.c sort_small.c \
 		print_stack.c sort_4.c sort_5.c
 

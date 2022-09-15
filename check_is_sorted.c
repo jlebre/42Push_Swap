@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:39:48 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/15 16:55:42 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 19:10:34 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,9 @@ int	check_is_sorted(void)
 	while (ptr)
 	{
 		if (n > ptr->nb)
-		{
-			ft_red("Is not sorted!\n");
 			return (0);
-		}
 		n = ptr->nb;
 		ptr = ptr->next;
 	}
-	ft_green("Is sorted!\n");
 	return (1);
 }

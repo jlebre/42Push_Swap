@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/15 17:19:02 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 20:14:49 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ t_stack	*stack_b(void)
 int	main(int argc, char **argv)
 {
 	if (argc < 2)
-		ft_error ();
+		return (0);
 	if (!check(++argv))
-		ft_red("Error\n");
+		ft_printf("Error\n");
 	else if (!check_is_sorted())
 	{
 		if ((argc - 1) <= 5)
@@ -44,24 +44,3 @@ int	main(int argc, char **argv)
 	free_stack(stack_b());
 	return (0);
 }
-
-/*
-	temp = stack_a()->next;
-	while (temp != NULL)
-	{
-		ft_printf("%d ----- %d\n", temp->content, temp->nb);
-		temp = temp->next;
-	}
-
-	print_stack();
-	pb();
-	print_stack();
-	ra();
-	print_stack();
-	pa();
-	print_stack();
-	rra();
-	print_stack();
-	sa();
-	print_stack();
-*/

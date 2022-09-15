@@ -25,13 +25,3 @@ void	print_stack(void)
 	}
 	ft_printf("_____         _____\n\n");
 }
-
-/*
-		if (b->content)
-			ft_printf("             %d\n", b->content);
-		else
-			ft_printf("\n");
-
-
-			 || b != NULL
-			*/
