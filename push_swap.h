@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:16 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/15 16:50:21 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 18:33:19 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ void	print_stack(void);
 //ALGORITHM
 void	sort_small(void);
 void	sort_big(void);
+void	sort_3(void);
+void	sort_4(void);
+void	sort_5(void);
 
 //SWAP
 void	swap(t_stack *stack);
