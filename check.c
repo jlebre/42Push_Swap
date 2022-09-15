@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:19:50 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/14 19:09:20 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/15 16:32:32 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	check_all_int(char **argv)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
 	while (argv[i])
 	{
@@ -36,8 +36,8 @@ int	check_all_int(char **argv)
 
 int	check_limits(char **argv)
 {
-	int	i;
-	long long n;
+	int			i;
+	long long	n;
 
 	i = 0;
 	while (argv[i])
@@ -52,11 +52,11 @@ int	check_limits(char **argv)
 	return (1);
 }
 
-int	check_duplicates()
+int	check_duplicates(void)
 {
 	t_stack	*temp;
 	t_stack	*ptr;
-	
+
 	temp = stack_a()->next;
 	while (temp)
 	{
@@ -72,11 +72,11 @@ int	check_duplicates()
 	return (1);
 }
 
-int	downsize()
+int	downsize(void)
 {
 	t_stack	*temp;
 	t_stack	*ptr;
-	
+
 	temp = stack_a()->next;
 	while (temp)
 	{
@@ -93,7 +93,7 @@ int	downsize()
 	return (1);
 }
 
-int check(char **argv)
+int	check(char **argv)
 {
 	if (!check_all_int(argv))
 		return (0);

@@ -6,17 +6,17 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:39:48 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 19:54:12 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 16:33:26 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_is_sorted()
+int	check_is_sorted(void)
 {
 	t_stack	*ptr;
 	int		n;
-	
+
 	ptr = stack_a()->next;
 	n = -1;
 	while (ptr)

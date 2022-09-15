@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:16 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/14 18:47:50 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/15 16:50:21 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,54 +26,55 @@ typedef struct s_stack
 	int				content;
 	int				nb;
 	int				size;
-	struct s_stack 	*next;
+	struct s_stack	*next;
 }		t_stack;
 
 //COLORS
-int	ft_green(char *str);
-int	ft_red(char *str);
-int	ft_yellow(char *str);
+int		ft_green(char *str);
+int		ft_red(char *str);
+int		ft_yellow(char *str);
 
 //CHECKS
-int 	check(char **argv);
-int		check_is_sorted();
+int		check(char **argv);
+int		check_is_sorted(void);
 
 //STACKS
-t_stack	*stack_a();
-t_stack	*stack_b();
-int add_stack(t_stack *stack, int  nbr);
-void    free_stack(t_stack *stack);
-void    print_stack();
+t_stack	*stack_a(void);
+t_stack	*stack_b(void);
+int		add_stack(t_stack *stack, int nbr);
+int		size_of_stack(void);
+void	free_stack(t_stack *stack);
+void	print_stack(void);
 
 //ALGORITHM
-void    sort_small();
-void    sort_big();
+void	sort_small(void);
+void	sort_big(void);
 
 //SWAP
-void    swap(t_stack *stack);
-void	sa();
-void	sb();
-void	ss();
+void	swap(t_stack *stack);
+void	sa(void);
+void	sb(void);
+void	ss(void);
 
 //PUSH
-void    push(t_stack *stack1, t_stack *stack2);
-void	pa();
-void	pb();
+void	push(t_stack *stack1, t_stack *stack2);
+void	pa(void);
+void	pb(void);
 
 //ROTATE
-void    rotate(t_stack *stack);
-void	ra();
-void	rb();
-void	rr();
+void	rotate(t_stack *stack);
+void	ra(void);
+void	rb(void);
+void	rr(void);
 
 //REVERSE ROTATE
-void    rev_rotate(t_stack *stack);
-void	rra();
-void	rrb();
-void	rrr();
+void	rev_rotate(t_stack *stack);
+void	rra(void);
+void	rrb(void);
+void	rrr(void);
 
 //UTILS
-void    ft_error(void);
-int		downsize();
+void	ft_error(void);
+int		downsize(void);
 
 #endif

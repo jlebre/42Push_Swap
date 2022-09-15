@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 13:33:21 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 17:08:50 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 16:30:31 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,15 @@ void		ft_putnbr_fd(int n, int fd);
 
 //BONUS
 
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list		*ft_lstnew(void *content);
+void		ft_lstadd_front(t_list **lst, t_list *new);
+int			ft_lstsize(t_list *lst);
+t_list		*ft_lstlast(t_list *lst);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(void *));
+void		ft_lstclear(t_list **lst, void (*del)(void *));
+void		ft_lstiter(t_list *lst, void (*f)(void *));
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //GET_NEXT_LINE
 
@@ -80,26 +80,26 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
-char	*get_line(char *line, char *buf);
-int		check_gnl(char *buf);
+char		*get_next_line(int fd);
+char		*get_line(char *line, char *buf);
+int			check_gnl(char *buf);
 
 //FT_PRINTF
 
-int		ft_printf(const char *c, ...);
-int		ft_strlen_pf(const char *str);
-int		ft_strchr_pf(const char *s, int c);
-int		ft_putchar_fd_pf(char c, int fd);
-int		ft_putstr_fd_pf(char *s, int fd);
-int		ft_putnbr_fd_pf(int n, int k, int fd);
-int		ft_putnbr_base_fd(unsigned int n, char *base, int k, int fd);
-int		ft_putnbr_p_fd(unsigned long n, char *base, int k, int fd);
-int		ft_putpointer_fd(unsigned long ptr, int fd);
-int		ft_unsigned(unsigned int nb, int fd);
+int			ft_printf(const char *c, ...);
+int			ft_strlen_pf(const char *str);
+int			ft_strchr_pf(const char *s, int c);
+int			ft_putchar_fd_pf(char c, int fd);
+int			ft_putstr_fd_pf(char *s, int fd);
+int			ft_putnbr_fd_pf(int n, int k, int fd);
+int			ft_putnbr_base_fd(unsigned int n, char *base, int k, int fd);
+int			ft_putnbr_p_fd(unsigned long n, char *base, int k, int fd);
+int			ft_putpointer_fd(unsigned long ptr, int fd);
+int			ft_unsigned(unsigned int nb, int fd);
 
 //
-char	*ft_strjoin_without_newline(char const *s1, char const *s2);
-char	*ft_strdup_without_newline(const char *str);
-char	*ft_remove_newline(char *str);
+char		*ft_strjoin_without_newline(char const *s1, char const *s2);
+char		*ft_strdup_without_newline(const char *str);
+char		*ft_remove_newline(char *str);
 
 #endif

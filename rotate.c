@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 19:29:15 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/12 12:53:49 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/15 16:34:46 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,19 @@ void	rotate(t_stack *stack)
 	}
 }
 
-void	ra()
+void	ra(void)
 {
 	rotate(stack_a());
 	ft_printf("ra\n");
 }
 
-void	rb()
+void	rb(void)
 {
 	rotate(stack_b());
 	ft_printf("rb\n");
 }
 
-void	rr()
+void	rr(void)
 {
 	rotate(stack_a());
 	rotate(stack_b());

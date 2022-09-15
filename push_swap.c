@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:23 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/14 22:22:25 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/15 16:47:42 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*stack_a()
+t_stack	*stack_a(void)
 {
 	static t_stack	a;
 
 	return (&a);
 }
 
-t_stack	*stack_b()
+t_stack	*stack_b(void)
 {
 	static t_stack	b;
 
@@ -27,7 +27,7 @@ t_stack	*stack_b()
 }
 
 int	main(int argc, char **argv)
-{	
+{
 	if (argc < 2)
 		ft_error ();
 	if (!check(++argv))
@@ -38,8 +38,8 @@ int	main(int argc, char **argv)
 			sort_small();
 		else if ((argc - 1) > 5)
 			sort_big();
+		check_is_sorted();
 	}
-	check_is_sorted();
 	free_stack(stack_a());
 	free_stack(stack_b());
 	return (0);

@@ -6,14 +6,14 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:48:40 by jlebre            #+#    #+#             */
-/*   Updated: 2022/09/11 16:15:38 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/09/15 16:33:55 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_error(void)
+void	ft_error(void)
 {
-    ft_red("Error\n");
-    exit (0);
+	ft_red("Error\n");
+	exit (0);
 }
