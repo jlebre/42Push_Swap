@@ -12,8 +12,7 @@
 
 CC = gcc
 RM = @rm -fr
-FLAGS = -Wall -Werror -Wextra 
-#-fsanitize=address
+FLAGS = -Wall -Werror -Wextra -fsanitize=address
 
 NAME = push_swap
 
@@ -32,7 +31,7 @@ LIB = .
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT) $(HEADER)
-	@$(CC) $(OBJ) $(LIBFT) -I$(LIB) -I$(LIBFT_PATH) -o $(NAME)
+	@$(CC) $(OBJ) $(LIBFT) $(FLAGS) -I$(LIB) -I$(LIBFT_PATH) -o $(NAME)
 	@echo "\033[0;32mPush_swap Compiled!\033[0m"
 
 $(LIBFT):
