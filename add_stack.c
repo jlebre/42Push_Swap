@@ -43,6 +43,8 @@ void	free_stack(t_stack *stack)
 	t_stack	*ptr;
 	t_stack	*temp;
 
+	if (!stack->next)
+		return ;
 	temp = stack->next;
 	while (temp != NULL)
 	{
@@ -50,4 +52,5 @@ void	free_stack(t_stack *stack)
 		temp = temp->next;
 		free(ptr);
 	}
+	stack->next = NULL;
 }

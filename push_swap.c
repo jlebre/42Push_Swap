@@ -38,9 +38,11 @@ int	main(int argc, char **argv)
 			sort_small();
 		else if ((argc - 1) > 5)
 			sort_big();
-		check_is_sorted();
 	}
 	free_stack(stack_a());
 	free_stack(stack_b());
 	return (0);
 }
+
+//check_is_sorted();
+	//print_stack();

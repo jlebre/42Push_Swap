@@ -25,14 +25,8 @@ typedef struct s_stack
 {
 	int				content;
 	int				nb;
-	int				size;
 	struct s_stack	*next;
 }		t_stack;
-
-//COLORS
-int		ft_green(char *str);
-int		ft_red(char *str);
-int		ft_yellow(char *str);
 
 //CHECKS
 int		check(char **argv);

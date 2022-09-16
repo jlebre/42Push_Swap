@@ -15,13 +15,22 @@
 void	print_stack(void)
 {
 	t_stack	*a;
+	t_stack	*b;
 
 	a = stack_a()->next;
-	ft_printf("-----PUSH SWAP-----\n___________________\n\n  A             B  \n\n");
+	b = stack_b()->next;
+	ft_printf("-----PUSH SWAP-----\n___________________\n\n  A\n\n");
 	while (a != NULL)
 	{
 		ft_printf("%d\n", a->content);
 		a = a->next;
 	}
-	ft_printf("_____         _____\n\n");
+	ft_printf("_____");
+	ft_printf("\n\n  B\n\n");
+	while (b != NULL)
+	{
+		ft_printf("%d\n", b->content);
+		b = b->next;
+	}
+	ft_printf("_____\n\n\n\n");
 }

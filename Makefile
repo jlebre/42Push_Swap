@@ -12,12 +12,11 @@
 
 CC = gcc
 RM = @rm -fr
-FLAGS = -Wall -Werror -Wextra 
-#-fsanitize=address
+FLAGS = -Wall -Werror -Wextra -fsanitize=address
 
 NAME = push_swap
 
-SRC = push_swap.c colors.c check.c add_stack.c check_is_sorted.c \
+SRC = push_swap.c check.c add_stack.c check_is_sorted.c \
 		push.c swap.c rotate.c rev_rotate.c sort_big.c sort_small.c \
 		print_stack.c sort_4.c sort_5.c
 

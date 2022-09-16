@@ -17,7 +17,10 @@ int	check_is_sorted(void)
 	t_stack	*ptr;
 	int		n;
 
-	ptr = stack_a()->next;
+	if (stack_a()->next)
+		ptr = stack_a()->next;
+	else
+		return (0);
 	n = -1;
 	while (ptr)
 	{

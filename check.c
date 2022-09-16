@@ -57,19 +57,23 @@ int	check_duplicates(void)
 	t_stack	*temp;
 	t_stack	*ptr;
 
-	temp = stack_a()->next;
-	while (temp)
+	if (stack_a()->next)
 	{
-		ptr = stack_a()->next;
-		while (ptr)
+		temp = stack_a()->next;
+		while (temp)
 		{
-			if (ptr != temp && ptr->content == temp->content)
-				return (0);
-			ptr = ptr->next;
+			ptr = stack_a()->next;
+			while (ptr)
+			{
+				if (ptr != temp && ptr->content == temp->content)
+					return (0);
+				ptr = ptr->next;
+			}
+			temp = temp->next;
 		}
-		temp = temp->next;
+		return (1);
 	}
-	return (1);
+	return (0);
 }
 
 int	downsize(void)
