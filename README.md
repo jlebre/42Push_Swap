@@ -11,6 +11,8 @@ The fewer moves you use, the better your solution!
 
 This project is an excellent way to improve problem-solving skills, understand sorting algorithms, and optimize efficiency.
 
+📜 To see the project subject, [click here](https://github.com/jlebre/42Push_Swap/blob/main/push_swap.pdf)!
+
 ---
 
 ## 📂 Important Files
@@ -19,17 +21,17 @@ This project is an excellent way to improve problem-solving skills, understand s
 
 🔹 To see the `Makefile`, [click here](https://github.com/jlebre/42Push_Swap/blob/main/Makefile)!
 
-🔹 [Main Function](https://github.com/jlebre/42Push_Swap/blob/main/push_swap.c)
+🔹 [Main Function](https://github.com/jlebre/42Push_Swap/blob/main/srcs/push_swap.c)
 
-🔹 [Stack Operations](https://github.com/jlebre/42Push_Swap/blob/main/operations.c)
+🔹 [Stack Operations](https://github.com/jlebre/42Push_Swap/blob/main/srcs/operations.c)
 
-🔹 [Sorting Algorithms](https://github.com/jlebre/42Push_Swap/blob/main/sorting.c)
+🔹 [Sorting Algorithms](https://github.com/jlebre/42Push_Swap/blob/main/srcs/sorting.c)
 
-🔹 [Utility Functions](https://github.com/jlebre/42Push_Swap/blob/main/utils.c)
+🔹 [Utility Functions](https://github.com/jlebre/42Push_Swap/blob/main/srcs/utils.c)
 
-🔹 [Argument Parser](https://github.com/jlebre/42Push_Swap/blob/main/parser.c)
+🔹 [Argument Parser](https://github.com/jlebre/42Push_Swap/blob/main/srcs/parser.c)
 
-🔹 [Error Handling](https://github.com/jlebre/42Push_Swap/blob/main/error.c)
+🔹 [Error Handling](https://github.com/jlebre/42Push_Swap/blob/main/srcs/error.c)
 
 ---
 
