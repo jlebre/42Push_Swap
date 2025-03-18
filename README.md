@@ -23,15 +23,19 @@ This project is an excellent way to improve problem-solving skills, understand s
 
 🔹 [Main Function](https://github.com/jlebre/42Push_Swap/blob/main/srcs/push_swap.c)
 
-🔹 [Stack Operations](https://github.com/jlebre/42Push_Swap/blob/main/srcs/operations.c)
+🔹 [Argument Parser](https://github.com/jlebre/42Push_Swap/blob/main/srcs/check.c)
 
-🔹 [Sorting Algorithms](https://github.com/jlebre/42Push_Swap/blob/main/srcs/sorting.c)
+Sorting Algorithms:  
+🔹 [Sort Small](https://github.com/jlebre/42Push_Swap/blob/main/srcs/sort_small.c)  
+🔹 [Sort 4](https://github.com/jlebre/42Push_Swap/blob/main/srcs/sort_4.c)   
+🔹 [Sort 5](https://github.com/jlebre/42Push_Swap/blob/main/srcs/sort_5.c)  
+🔹 [Sort Big](https://github.com/jlebre/42Push_Swap/blob/main/srcs/sort_big.c)   
 
-🔹 [Utility Functions](https://github.com/jlebre/42Push_Swap/blob/main/srcs/utils.c)
-
-🔹 [Argument Parser](https://github.com/jlebre/42Push_Swap/blob/main/srcs/parser.c)
-
-🔹 [Error Handling](https://github.com/jlebre/42Push_Swap/blob/main/srcs/error.c)
+Operations:  
+🔹 [Swap](https://github.com/jlebre/42Push_Swap/blob/main/srcs/swap.c)  
+🔹 [Rotate](https://github.com/jlebre/42Push_Swap/blob/main/srcs/rotate.c)  
+🔹 [Reverse Rotate](https://github.com/jlebre/42Push_Swap/blob/main/srcs/rev_rotate.c)  
+🔹 [Push](https://github.com/jlebre/42Push_Swap/blob/main/srcs/push.c)  
 
 ---
 
@@ -54,7 +58,7 @@ make
 ```
 Example:
 ```bash
-./push_swap 3 2 5 1 4
+./push_swap 3 2 5 1 5
 ```
 
 This will output a sequence of operations to sort the stack.
