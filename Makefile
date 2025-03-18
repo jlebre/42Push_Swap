@@ -16,9 +16,13 @@ FLAGS = -Wall -Werror -Wextra -fsanitize=address
 
 NAME = push_swap
 
-SRC = push_swap.c check.c add_stack.c check_is_sorted.c \
+FILE = push_swap.c check.c add_stack.c check_is_sorted.c \
 		push.c swap.c rotate.c rev_rotate.c sort_big.c sort_small.c \
 		print_stack.c sort_4.c sort_5.c
+
+SRCS_DIR = srcs
+
+SRC = $(addprefix $(SRCS_DIR)/, $(FILE))
 
 OBJ = $(SRC:.c=.o)
 
